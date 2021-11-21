@@ -1,8 +1,3 @@
-/* eslint-disable arrow-parens */
-/* eslint-disable eol-last */
-/* eslint-disable brace-style */
-/* eslint-disable block-spacing */
-/* eslint-disable indent */
 /* eslint-disable camelcase */
 
 exports.shorthands = undefined;

@@ -1,5 +1,3 @@
-/* eslint-disable eol-last */
-/* eslint-disable indent */
 const InvariantError = require('../../exceptions/InvariantError');
 const { SongPayloadSchema } = require('./schema');
 

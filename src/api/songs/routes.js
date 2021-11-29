@@ -1,5 +1,3 @@
-/* eslint-disable eol-last */
-/* eslint-disable indent */
 const routes = (handler) => [{
         method: 'POST',
         path: '/songs',

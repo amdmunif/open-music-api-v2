@@ -1,6 +1,3 @@
-/* eslint-disable object-curly-newline */
-/* eslint-disable eol-last */
-/* eslint-disable indent */
 const ClientError = require('../../exceptions/ClientError');
 
 class SongsHandler {
@@ -18,7 +15,7 @@ class SongsHandler {
     async postSongHandler(request, h) {
         try {
             this._validator.validateSongPayload(request.payload);
-            const { title = 'untitled', year, performer, genre, duration } = request.payload;
+            const { title, year, performer, genre, duration } = request.payload;
 
             const songId = await this._service.addSong({ title, year, performer, genre, duration });
 

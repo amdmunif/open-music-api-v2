@@ -5,8 +5,9 @@ const NotFoundError = require('../../exceptions/NotFoundError');
 const AuthorizationError = require('../../exceptions/AuthorizationError');
 
 class PlaylistsService {
-    constructor() {
+    constructor(collaborationService) {
         this._pool = new Pool();
+        this._collaborationService = collaborationService;
     }
 
     // Add playlist

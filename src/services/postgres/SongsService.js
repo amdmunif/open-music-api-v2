@@ -1,10 +1,3 @@
-/* eslint-disable object-curly-newline */
-/* eslint-disable class-methods-use-this */
-/* eslint-disable padded-blocks */
-/* eslint-disable no-unused-vars */
-/* eslint-disable eol-last */
-/* eslint-disable indent */
-/* eslint-disable space-before-blocks */
 const { Pool } = require('pg');
 const { nanoid } = require('nanoid');
 const InvariantError = require('../../exceptions/InvariantError');

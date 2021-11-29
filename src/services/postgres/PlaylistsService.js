@@ -60,13 +60,10 @@ class PlaylistsService {
             values: [playlistId],
         };
         const result = await this._pool.query(query);
-
         if (!result.rowCount) {
             throw new NotFoundError('Playlist tidak ditemukan');
         }
-
         const playlist = result.rows[0];
-
         if (playlist.owner !== owner) {
             throw new AuthorizationError('Anda tidak berhak mengakses resource ini');
         }

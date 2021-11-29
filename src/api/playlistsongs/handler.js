@@ -5,18 +5,18 @@ class PlaylistSongsHandler {
         this._service = service;
         this._validator = validator;
 
-        this.postPlaylistSongHandler = this.postPlaylistSongHandler.bind(this);
+        this.addPlaylistSongHandler = this.addPlaylistSongHandler.bind(this);
         this.getPlaylistSongHandler = this.getPlaylistSongHandler.bind(this);
         this.deletePlaylistSongHandler = this.deletePlaylistSongHandler.bind(this);
     }
 
-    async postPlaylistSongHandler(request, h) {
+    async addPlaylistSongHandler(request, h) {
         try {
-            this._validator.validatePlaylistSongPayload(request.payload);
-
-            const { songId } = request.payload;
             const { playlistId } = request.params;
+            const { songId } = request.payload;
             const { id: credentialId } = request.auth.credentials;
+
+            this._validator.validatePlaylistSongPayload(request.payload);
 
             await this._service.verifyPlaylistAccess(playlistId, credentialId);
 
